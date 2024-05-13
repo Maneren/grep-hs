@@ -1,0 +1,23 @@
+cabal-version: 3.4
+name:          grep
+version:       0.1.0.0
+synopsis:      Simple grep written in Haskell
+license:       MIT
+license-file:  LICENSE
+author:        Maneren
+maintainer:    maneren731@gmail.com
+build-type:    Simple
+
+common warnings
+    ghc-options: -Wall
+
+executable grep
+    import:           warnings
+    main-is:          Main.hs
+    other-modules:    Args
+    build-depends:
+        , base                  ^>=4.19.1
+        , optparse-applicative  ^>=0.18.1
+
+    hs-source-dirs:   app
+    default-language: GHC2021
